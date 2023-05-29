@@ -96,10 +96,10 @@
 
   ```java
   PriorityQueue<Integer> pq = new PriorityQueue<>(
-            // "양수" 리턴시 스왑
-            (o1, o2) -> {
-                if(Math.abs(o1) == Math.abs(o2)) return o1 - o2;
-                else return Math.abs(o1) - Math.abs(o2);
-            }
+      // "양수" 리턴시 스왑
+      (o1, o2) -> {
+          if(Math.abs(o1) == Math.abs(o2)) return o1 - o2;
+          else return Math.abs(o1) - Math.abs(o2);
+      }
     );
   ```
