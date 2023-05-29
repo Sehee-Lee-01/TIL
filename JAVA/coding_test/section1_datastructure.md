@@ -62,6 +62,44 @@
 
 - #### `스택과 큐` 백준 1874
 
+  - `Stack` 라이브러리 사용하기
+
+  ```java
+  import java.util.Stack;
+
+  Stack<Integer> stack = new Stack<>();
+  stack.push(1);
+  stack.pop();
+  ```
+
 - #### `스택과 큐` 백준 2164
 
+  - `Queue` 라이브러리 사용하기
+
+  ```java
+    import java.util.Queue;
+    import java.util.LinkedList;
+    Queue<Integer> queue = new LinkedList<>();
+  ```
+
 - #### `스택과 큐` 백준 11286
+
+  - 문제 이해가 안될 땐 입출력으로 예상해보자.
+
+  - `PriorityQueue` 라이브러리 구현하기
+
+  ```java
+  PriorityQueue<Integer> pq = new PriorityQueue<>();
+  ```
+
+  - `PriorityQueue` 우선순위 큐 정렬 커스터마이징(절댓값으로 우선순위를 정할 때)
+
+  ```java
+  PriorityQueue<Integer> pq = new PriorityQueue<>(
+            // "양수" 리턴시 스왑
+            (o1, o2) -> {
+                if(Math.abs(o1) == Math.abs(o2)) return o1 - o2;
+                else return Math.abs(o1) - Math.abs(o2);
+            }
+    );
+  ```
