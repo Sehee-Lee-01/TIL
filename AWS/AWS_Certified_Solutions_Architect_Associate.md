@@ -10,3 +10,5 @@
 
 - [비공식 AWS 공인 솔루션스 아키텍트 – 어소시에이트 시험 가이드](https://github.com/serithemage/AWSCertifiedSolutionsArchitectUnofficialStudyGuide)
 - [AWS SAA-C03 자격증 준비부터 합격까지 후기](https://devhosaga.tistory.com/entry/AWS-SAA-C03-%EC%9E%90%EA%B2%A9%EC%A6%9D-%EC%A4%80%EB%B9%84%EB%B6%80%ED%84%B0-%ED%95%A9%EA%B2%A9%EA%B9%8C%EC%A7%80)
+
+- [문제 은행](https://www.examtopics.com/exams/amazon/aws-certified-solutions-architect-associate-saa-c03/)
