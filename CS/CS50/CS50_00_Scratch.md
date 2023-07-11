@@ -1,4 +1,4 @@
-# 00. Scratch
+z# 00. Scratch
 
 > Reference
 > [1) CS50 Lecture 2023](https://cs50.harvard.edu/x/2023/weeks/0/) > [2) 모두를 위한 컴퓨터 과학 (CS50 2019)](www.boostcourse.org/cs112)
