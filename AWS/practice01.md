@@ -1,5 +1,7 @@
 > [ExamTopics: Amazon AWS Certified Solutions Architect - Associate SAA-C03 Exam](https://www.examtopics.com/exams/amazon/aws-certified-solutions-architect-associate-saa-c03)를 기반으로 학습한 내용입니다.
 
+> 🤔: 잘 모르겠어요.
+
 # Practice 01(Question #1 ~ #50)
 
 ## Question #1
@@ -144,6 +146,48 @@
   - 표준 대기열의 모든 기능을 갖추고 있지만 작업 및 이벤트의 순서가 중요하거나 중복을 허용할 수 없는 경우 애플리케이션 간 메시징을 향상시키도록 설계
 
 ## Question #11
+
+### 상황
+
+- 로컬파일에 아이디와 비밀번호가 저장되어있다. 이는 EC2인스턴스와 데이터베이스를 연결하는데 쓰인다. 이를 오버헤드가 없도록 간소화 하고싶다.
+
+### 핵심
+
+- [AWS Secrets Manager](https://aws.amazon.com/ko/secrets-manager/)
+  - 데이터베이스 보안 인증 정보 및 API 키와 같은 보안 정보를 안전하게 암호화하고 중앙 집중식으로 감사할 수 있습니다.
+  - AWS Identity and Access Management(IAM) 권한 정책을 사용하여 보안 암호에 대한 액세스를 관리합니다.
+  - 활성 애플리케이션을 재배포하거나 중단하지 않고 온디맨드 또는 일정에 따라 보안 암호를 교체합니다.
+  - AWS 로깅, 모니터링 및 알림 서비스와 보안 암호를 통합합니다.
+
+### 헷갈리는 선지
+
+- C) Create an encrypted Amazon Elastic Block Store (Amazon EBS) volume for each EC2 instance. Attach the new EBS volume to each EC2 instance. Migrate the credential file to the new EBS volume. Point the application to the new EBS volume.
+- 이 방법을 사용할 수는 있지만 AWSSecrets Manager보다는 복잡하다.
+
+## Question #12 🤔
+
+### 상황
+
+- 정적 데이터와 동적 데이터의 레이턴시를 줄이고 싶다.
+- ALB 뒤 EC2인스턴스에서 애플리케이션이 돌아가고, 정적 데이터는 S3에 저장되어있다.
+- Amazon Route 53를 이용하여 전용 도메인을 사용하고 있다.
+
+### 핵심
+
+- 레이턴시 관련 서비스
+
+  - [AWS CloudFront](https://aws.amazon.com/ko/cloudfront/)
+    - 엣지 로케이션을 사용하여 캐싱
+  - [Global Accelerator](https://aws.amazon.com/ko/global-accelerator/)
+    - 엣지 로케이션을 사용하여 캐싱은 안하지만, 최적의 경로 탐색
+    - 캐싱 기능이 없어 매 요청마다 새로 불러온다.
+  - 공통점
+    - AWS 글로벌 네트워크와 전 세계에 분포된 해당 엣지 로케이션을 사용
+    - DDoS 공격을 막기 위해 AWS Shield와 통합
+  - 참고
+    - [AWS Global Accelerator와 Amazon CloudFront의 차이](https://rainbound.tistory.com/entry/AWS-Global-Accelerator%EC%99%80-Amazon-CloudFront%EC%9D%98-%EC%B0%A8%EC%9D%B4)
+
+## Question #13
 
 ### 상황
 
